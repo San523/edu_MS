@@ -18,7 +18,10 @@ export default {
     登录部分
   **/
   //测试接口 category_name
-  test({ commit, state }, params) {
+  test({
+    commit,
+    state
+  }, params) {
     return axios({
       //url: urltitle + '/Mesapp/test',
       url: "http://192.168.4.166:8080/prj-gzjd/appProjectController!getEquip.m",
@@ -28,7 +31,10 @@ export default {
   },
 
   //django测试接口 
-  djangoTest({ commit, state }, params) {
+  djangoTest({
+    commit,
+    state
+  }, params) {
     return axios({
       //url: urltitle + '/Mesapp/test',
       url: "/django/form/",
@@ -38,7 +44,10 @@ export default {
   },
 
   //机构管理员登录验证接口 
-  trainingAdminLogin({ commit, state }, params) {
+  trainingAdminLogin({
+    commit,
+    state
+  }, params) {
     return axios({
       //url: urltitle + '/Mesapp/test',
       url: "/django/users/trainingAdminLogin",
@@ -47,8 +56,11 @@ export default {
     });
   },
 
-   //系统管理员登录验证接口 
-  administratorLogin({ commit, state }, params) {
+  //系统管理员登录验证接口 
+  administratorLogin({
+    commit,
+    state
+  }, params) {
     return axios({
       //url: urltitle + '/Mesapp/test',
       url: "/django/users/administratorLogin",
@@ -57,8 +69,11 @@ export default {
     });
   },
 
- //系统管理员注册
-  adminRegister({ commit, state }, params) {
+  //系统管理员注册
+  adminRegister({
+    commit,
+    state
+  }, params) {
     return axios({
       //url: urltitle + '/Mesapp/test',
       url: "/django/users/adminRegister",
@@ -69,7 +84,10 @@ export default {
 
 
   //退出登录
-  outLogin({ commit, state }, params) {
+  outLogin({
+    commit,
+    state
+  }, params) {
     return axios({
       //url: urltitle + '/Mesapp/test',
       url: "/django/users/outLogin",
@@ -79,10 +97,13 @@ export default {
   },
 
   //获取验证码
-  verifycode({ commit, state }, params) {
+  verifycode({
+    commit,
+    state
+  }, params) {
     return axios({
       //url: urltitle + '/Mesapp/test',
-      url: "/django/users/verifycode/",
+      url: "/ajaxserver", ///django/users/verifycode/  http://b.com/users/verifycode/
       method: 'post',
       responseType: 'arraybuffer',
       data: params,
@@ -90,7 +111,10 @@ export default {
   },
 
   //验证验证码
-  verifycodeValid({ commit, state }, params) {
+  verifycodeValid({
+    commit,
+    state
+  }, params) {
     return axios({
       //url: urltitle + '/Mesapp/test',
       url: "/django/users/verifycodeValid/",
